@@ -23,9 +23,9 @@ use strict;
 use warnings;
 
 ### mail settings
-my $to = 'dataprotector@vsb.cz';
-my $from = 'jelen';
-my $subject = 'Homen - count small files';
+my $to = 'xxxxx';
+my $from = 'xxxxx';
+my $subject = 'xxxxx';
 
 ### list of directory root
 my $root = "/";
