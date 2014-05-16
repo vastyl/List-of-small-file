@@ -24,10 +24,11 @@ use warnings;
 
 our $total_war=0;
 our $total_err=0;
+
 ### mail settings
-my $to = 'dataprotector@vsb.cz';
-my $from = 'jelen';
-my $subject = 'Homen - count small files';
+my $to = 'xxx';
+my $from = 'xxx';
+my $subject = 'xxx -count small files';
 
 ### list of directory root
 my $root = "/";
