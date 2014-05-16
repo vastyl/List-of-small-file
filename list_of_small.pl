@@ -46,7 +46,7 @@ foreach my $item (@dirs) {
 	if ($csf != 0){
 		$percent = int(($csf / $cf) * 100);
 	} 
-	push(@result, "$root$item \t $percent %\n Small files \t $csf \nTotal files \t $cf \n ***---***---***");
+	push(@result, "$root$item \t $percent %\nSmall files \t $csf \nTotal files \t $cf \n***---***---***\n");
 	
 }
 open MAIL, "|/usr/sbin/sendmail -t";
@@ -59,7 +59,7 @@ print MAIL "Subject: $subject\n\n";
 print MAIL "RESULT of small files in server\n";
 print MAIL "-------------------------------\n";
 print MAIL @result;
-print MAIL "\n";
+print MAIL "\n\n";
 print MAIL "Total files is: $sum_cf \n";
 print MAIL "Total small files is: $sum_csf \n";
 my $sum_percent = 0;
