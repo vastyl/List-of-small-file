@@ -38,18 +38,17 @@ my $sum_cf = 0;
 my $sum_csf = 0;
 foreach my $item (@dirs) {
 	my $percent = 0;
-	my $csf =`find $root$item -type f -size -1024c |wc -l 2>/dev/null`;
 	my $cf = `find $root$item  -type f |wc -l 2>/dev/null`;
+	my $csf =`find $root$item -type f -size -1024c |wc -l 2>/dev/null`;
 	chomp($csf); chomp($cf);
 	$sum_cf = $sum_cf + $cf;
 	$sum_csf = $sum_csf + $csf;
 	if ($csf != 0){
 		$percent = int(($csf / $cf) * 100);
 	} 
-	push(@result, "In directory $root$item is $csf small files and total files is $cf = $percent %\n");
+	push(@result, "$root$item \t $percent %\n Small files \t $csf \nTotal files \t $cf \n ***---***---***");
 	
 }
-
 open MAIL, "|/usr/sbin/sendmail -t";
 
 ### Mail Header
