@@ -65,6 +65,7 @@ print MAIL "Subject: $subject\n\n";
 ### Mail Body
 print MAIL "\nRESULT of small files in server\n";
 print MAIL "-------------------------------\n";
+print MAIL "small file <= 1024b\n";
 print MAIL @result;
 print MAIL "\n";
 print MAIL "Total files is: $sum_cf \n";
